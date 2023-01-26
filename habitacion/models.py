@@ -30,7 +30,8 @@ class TipoHabitacion(models.Model):
 # Habitacion.
 class Habitacion(models.Model):
     id = models.AutoField(primary_key = True)
-    numeroHabitacion = models.CharField(max_length=4, verbose_name="Numero de Habitacion")
+    
+    numeroHabitacion = models.IntegerField( verbose_name="Numero de Habitacion")
     class Disponibilidad(models.TextChoices):
         DISPONIBLE = 'Disponible',('Disponible')
         OCUPADA = 'Ocupada',('Ocupada')
@@ -38,6 +39,6 @@ class Habitacion(models.Model):
     class Estado(models.TextChoices):
         ACTIVO = '1', ('Activo')
         INACTIVO = '0', ('Inactivo')
-    estado = models.CharField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")
+    estado = models.BooleanField(max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")
     def __str__(self):
         return "Habitación %s" % (self.numeroHabitacion)

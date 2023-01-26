@@ -73,7 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'administracion.context_processors.sesion'
+                
             ],
         },
     },
@@ -147,7 +147,3 @@ EMAIL_HOST = 'smtp.googlemail.com'
 EMAIL_PORT = 587
 
 EMAIL_USE_TLS = True
-
-
-LOGIN_URL= 'inicio'
-LOGIN_REDIRECT_URL= 'index-admin'
