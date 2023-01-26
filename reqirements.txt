@@ -1,0 +1,2 @@
+django == 22.3.1
+pillow
