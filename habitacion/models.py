@@ -26,6 +26,7 @@ class TipoHabitacion(models.Model):
     class Meta:
         verbose_name = 'TipoHabitacion'
         verbose_name_plural = 'TipoHabitaciones'
+        ordering = ['nombreHabitacion']
 
 
 # Habitacion.
@@ -43,6 +44,7 @@ class Habitacion(models.Model):
     class Estado(models.TextChoices):
         ACTIVO = '1', ('Activo')
         INACTIVO = '0', ('Inactivo')
+    estado = models.CharField( max_length=1, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado")
     TipoHabitacion_id = models.ForeignKey(TipoHabitacion, on_delete=models.CASCADE, verbose_name="Tipo de Habitación",null=True)
 
     def __str__(self):

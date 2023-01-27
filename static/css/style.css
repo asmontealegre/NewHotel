@@ -1,13 +1,18 @@
-#img-logo{
-    width: 9%;
-    height: 9%
-    
+    #img-logo{
+    width: 10%;
+    height: 10%
     }
+    #titulo{
+        font-family:'Times New Roman', Times, serif;
+    }
+    #titulo{
+        font-size: 20px;
+    }
+    
     #barra{
-        max-height: 80px;
+        font-family:sans-serif;
         background:  #191970;
-       
-       
+          
     }
     #navbarSupportedContent{
         background:  #191970;
@@ -88,10 +93,10 @@
     #navbar-brand{
         font-size: 35px;
         color: white;
-        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
     #footer{
-        background-image: linear-gradient(to top, #191970  0%,  #020a3a 80%);
+    background: #191970;
     color: white;
     }
     #col-md-6 {
