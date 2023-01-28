@@ -13,6 +13,7 @@ class check(models.Model):
 
 class Reserva(models.Model):
     id = models.AutoField(primary_key = True)
+    fechaIngreso=models.DateField(auto_now_add=True, verbose_name="Fecha de Ingreso", help_text=u"MM/DA/AAAA",null=True, blank=True)
     cantidadHabitaciones = models.PositiveIntegerField('Cantidad o Stock', default = 1)
     numeroHuespedes =models.IntegerField(verbose_name='Numero de Huéspedes')
     valorReserva = models.BigIntegerField(verbose_name='Valor Reserva')
