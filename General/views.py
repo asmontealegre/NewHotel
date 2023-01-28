@@ -8,3 +8,4 @@ def Home(request):
 
 def error_404(request,exception):
     return page_not_found(request,'404.html')
+

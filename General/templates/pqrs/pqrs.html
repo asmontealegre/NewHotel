@@ -1,0 +1,57 @@
+{% extends 'partials/bodyAdmin.html' %}
+
+{% load static %}
+{% block contenido %}
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+        
+        <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+
+            <table id="tabla-general" class="table">
+                    <thead class=" " style="background:#191970; color:white;">
+                    
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Télefono</th>
+                    <th scope="col">Correo Electronico</th>
+                    <th scope="col">Asunto</th>
+                    <th scope="col">Comentario</th>
+                    <th scope="col">Fecha</th>
+                    {% if perms.usuarios.delete_pqrs or perms.usuarios.change_pqrs %}
+                    <th scope="col"></th>
+                {% endif %}
+                </thead>
+                <tbody>
+                    
+            {% for PQRS in pqrs %}
+            <tr>
+            {% if PQRS.estado == '1' %}
+
+                <td>{{PQRS.nombres}}</td>
+                <td>{{PQRS.apellidos}}</td>
+                <td>{{PQRS.telefono}}</td>
+                <td>{{PQRS.email}}</td>
+                <td>{{PQRS.asunto}}</td>
+                <td>{{PQRS.comentarioCliente}}</td>
+                <td>{{PQRS.fechaCreacion}}</td>
+               
+                <td >
+                    <a class="btn btn-" style='color:red;'href="{% url 'pqrs-eliminar' PQRS.id %}"onclick="return confirm('¿Estás seguro de eliminar la PQRS?')"><i class="fas  fa-trash-alt"></i></td>
+                    {% endif %} 
+                    
+            </tr>
+            {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        </div>
+    </div> 
+</div>
+
+
+{% endblock contenido %}
+
+

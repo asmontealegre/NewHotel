@@ -26,10 +26,11 @@
           </a>
     
           <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            <a class="me-3 py-2  text-decoration-none" href="{% url 'Home' %}"style="color: white;">Inicio</a>
             <a class="me-3 py-2  text-decoration-none" href="{% url 'reserva' %}"style="color: white;">Reservar</a>
             <a class="me-3 py-2  text-decoration-none" href="{% url 'habitacion' %}"style="color: white;">Habitaciones</a>
-            <a class="me-3 py-2  text-decoration-none" href="#"style="color: white;">Servicios</a>
-            <a class="py-2  text-decoration-none" href="#"style="color: white;">Contacto</a>
+            <a class="me-3 py-2  text-decoration-none" href="{% url 'servicios' %}"style="color: white;">Servicios</a>
+            <a class="py-2  text-decoration-none" href="{% url 'contacto' %}"style="color: white;">Contacto</a>
           </nav>
         </div>
       </header>

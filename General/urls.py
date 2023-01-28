@@ -26,4 +26,6 @@ urlpatterns = [
     path("",Home , name="Home"),
     path('habitacion/',include('habitacion.urls')),
     path('reserva/',include('reserva.urls')),
+    path('servicios/',include('servicios.urls')),
+    path('pqrs/',include('pqrs.urls')),
 ]
