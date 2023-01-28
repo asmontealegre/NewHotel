@@ -19,15 +19,15 @@
 <div class="container">
     <header>
         <div class="d-flex flex-column flex-md-row align-items-center pb-0 mb-0 ">
-          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+          <a href="{% url 'Home' %}" class="d-flex align-items-center text-dark text-decoration-none">
             <img id="img-logo" src="{% static 'img\logo.png' %}" alt="logo" class="d-lg-inline-block align-text-top">
-            <span class="fw-light slider-fuchsia"style="color: white; "><h2>LA GRAN ESTACIÓN</h2> </span>
+            <span class=" display-3"style="color: white; "><h2>LA GRAN ESTACIÓN</h2> </span>
             
           </a>
     
           <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-            <a class="me-3 py-2  text-decoration-none" href="#"style="color: white;">Reservar</a>
-            <a class="me-3 py-2  text-decoration-none" href="#"style="color: white;">Habitaciones</a>
+            <a class="me-3 py-2  text-decoration-none" href="{% url 'reserva' %}"style="color: white;">Reservar</a>
+            <a class="me-3 py-2  text-decoration-none" href="{% url 'habitacion' %}"style="color: white;">Habitaciones</a>
             <a class="me-3 py-2  text-decoration-none" href="#"style="color: white;">Servicios</a>
             <a class="py-2  text-decoration-none" href="#"style="color: white;">Contacto</a>
           </nav>

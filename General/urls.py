@@ -24,5 +24,6 @@ handler404= error_404
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",Home , name="Home"),
-    path('habitacion/',include('habitacion.urls'))
+    path('habitacion/',include('habitacion.urls')),
+    path('reserva/',include('reserva.urls')),
 ]

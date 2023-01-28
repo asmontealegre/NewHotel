@@ -1,0 +1,222 @@
+{% extends "partials/body.html" %}
+{% load static %}
+{% block contenido %} 
+
+<div class="container  pb-4">
+<main>
+    <br>
+<div class="container pt-5">
+<div class="container pt-5">
+<div class="px-4 py-3 my-5 text-left">
+    <h1 class=""></i>Reservas</h1>
+    <div class="col-lg-12 mx-auto">
+    <div class="d-grid gap-2 d-sm-flex ">
+        <p class="lead ">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+<div class="container">
+    <div class="row g-5">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-black">Su Reserva</span>
+          
+        </h4>
+        <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-primary">
+              <h6 class="my-0">Fecha de Llegada</h6>
+             
+            </div>
+            <span class="text-primary">10/02/2023</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-primary">
+              <h6 class="my-0">Fecha de Salida</h6>
+             
+            </div>
+            <span class="text-primary">11/02/2023</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-primary">
+              <h6 class="my-0">Noches</h6>
+             
+            </div>
+            <span class="text-primary">2</span>
+          </li>
+        <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between bg-light">
+                <div class="text-primary">
+                  <h6 class="my-0">Habitación</h6>
+                 
+                </div>
+                <span class="text-primary">Sencilla</span>
+              </li>
+            <li class="list-group-item d-flex justify-content-between bg-light">
+                <div class="text-primary">
+                  <h6 class="my-0">Cant Habitaciones</h6>
+                 
+                </div>
+                <span class="text-primary">2</span>
+              </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-primary">
+              <h6 class="my-0">Cant Huéspedes</h6>
+             
+            </div>
+            <span class="text-primary">2</span>
+          </li>
+          
+         
+          <li class="list-group-item d-flex justify-content-between">
+            <span class="text-primary">Total (COL)</span>
+            <strong  class="text-danger">$120.000</strong>
+          </li>
+        </ul>
+
+        
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Reserva Ahora!</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row g-3">
+            <div class="col-sm-6">
+                <label for="firstName" class="form-label">Check_in</label>
+                <input type="date" class="form-control"id="id_nombres" name="nombres" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">Check_out</label>
+                <input type="date" class="form-control"id="id_nombres" name="nombres" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Nombres</label>
+              <input type="text" class="form-control"id="id_nombres" name="nombres" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" id="id_apellidos" name="apellidos" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+
+            
+            
+            <div class="col-6">
+                <label for="country" class="form-label">Tipo de Documento</label>
+                <select class="form-select" id="id_tipoDocumento" name="tipoDocumento" required="">
+                  <option value="">...</option>
+                  <option name="CC">Cédula de Ciudadanía</option>
+                  <option name="CE">Cédula de Extranjería</option>
+                  <option name="PP">Pasaporte</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+
+            <div class="col-6">
+              <label for="address" class="form-label">Número de Documento</label>
+              <input type="number" class="form-control" id="id_documento" name="documento" placeholder="" required="">
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="col-6">
+                <label for="address" class="form-label">Teléfono</label>
+                <input type="number" class="form-control" id="id_telefono" name="telefono" placeholder="" required="">
+                <div class="invalid-feedback">
+                  Please enter your shipping address.
+                </div>
+              </div>
+
+              <div class="col-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@ejemplo.com">
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+
+            
+         
+
+          <hr class="my-4">
+        
+          <div class="col-4">
+            <label for="country" class="form-label">Tipo de Habitación</label>
+            <select class="form-select" id="id_tipoDocumento" name="tipoDocumento" required="">
+              <option value="">...</option>
+              <option name="Sencilla">Sencilla</option>
+              <option name="Doble">Doble</option>
+              <option name="Especial">Especial</option>
+              <option name="Individual">Individual</option>
+              <option name="Doble King">Doble King</option>
+              <option name="Cabaña Alpina">Cabaña Alpina</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid country.
+            </div>
+          </div>
+
+          <div class="col-4">
+            <label for="address" class="form-label">Cant Huéspedes</label>
+            <input type="number" class="form-control" id="id_telefono" name="telefono" placeholder="" required="">
+            <div class="invalid-feedback">
+              Please enter your shipping address.
+            </div>
+          </div>
+
+          <div class="col-4">
+            <label for="address" class="form-label">Cant Habitaciones</label>
+            <input type="number" class="form-control" id="id_telefono" name="telefono" placeholder="" required="">
+            <div class="invalid-feedback">
+              Please enter your shipping address.
+            </div>
+          </div>
+
+          
+          <hr class="my-4">
+
+          <h4 class="mb-3">Método de Pago</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+              <label class="form-check-label" for="credit">Transferencia Bancaria</label>
+            </div>
+            <div class="form-check">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="debit">Bancolombia</label>
+            </div>
+            <div class="form-check">
+              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="paypal">Efectivo</label>
+            </div>
+          </div>
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Reservar</button>
+        </form>
+      </div>
+    </div>
+</div>
+  </main>
+
+ 
+</div>
+{% endblock contenido %} 
