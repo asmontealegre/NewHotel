@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'usuarios',
     'pqrs',
+    'administracion',
     'reserva',
     'habitacion',
 ]

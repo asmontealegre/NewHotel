@@ -8,50 +8,70 @@
     <div class="card">
         <div class="card-body">
         
-        <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+            <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
 
-            <table id="tabla-general" class="table">
-                    <thead class=" " style="background:#191970; color:white;">
-                    
-                    <th scope="col">Nombres</th>
-                    <th scope="col">Apellidos</th>
-                    <th scope="col">Télefono</th>
-                    <th scope="col">Correo Electronico</th>
-                    <th scope="col">Asunto</th>
-                    <th scope="col">Comentario</th>
-                    <th scope="col">Fecha</th>
-                    {% if perms.usuarios.delete_pqrs or perms.usuarios.change_pqrs %}
-                    <th scope="col"></th>
-                {% endif %}
-                </thead>
-                <tbody>
-                    
-            {% for PQRS in pqrs %}
-            <tr>
-            {% if PQRS.estado == '1' %}
-
-                <td>{{PQRS.nombres}}</td>
-                <td>{{PQRS.apellidos}}</td>
-                <td>{{PQRS.telefono}}</td>
-                <td>{{PQRS.email}}</td>
-                <td>{{PQRS.asunto}}</td>
-                <td>{{PQRS.comentarioCliente}}</td>
-                <td>{{PQRS.fechaCreacion}}</td>
-               
-                <td >
-                    <a class="btn btn-" style='color:red;'href="{% url 'pqrs-eliminar' PQRS.id %}"onclick="return confirm('¿Estás seguro de eliminar la PQRS?')"><i class="fas  fa-trash-alt"></i></td>
-                    {% endif %} 
-                    
-            </tr>
-            {% endfor %}
-                </tbody>
-            </table>
-        </div>
+                    <table id="Table" class="table">
+                            <thead class=" " style="background:#191970; color:white;">
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Tipo de Documento</th>
+                                <th scope="col">N° Documento</th>
+                                <th scope="col">Nombres</th>
+                                <th scope="col">Apellidos</th>
+                                <th scope="col">Télefono</th>
+                                <th scope="col">Correo Electronico</th>
+                                <th scope="col">Asunto</th>
+                                <th scope="col">Comentario</th>
+                                <th scope="col">Archivo</th>
+                                <th scope="col"></th>
+                        
+                            </thead>
+                                <tbody>
+                                    
+                                    {% for PQRS in pqrs %}
+                                    <tr>
+                                    {% if PQRS.estado == '1' %}
+                                        <td>{{PQRS.fechaCreacion}}</td>
+                                        <td>{{PQRS.tipoDocumento}}</td>
+                                        <td>{{PQRS.numerodocumento}}</td>
+                                        <td>{{PQRS.nombres}}</td>
+                                        <td>{{PQRS.apellidos}}</td>
+                                        <td>{{PQRS.telefono}}</td>
+                                        <td>{{PQRS.email}}</td>
+                                        <td>{{PQRS.asunto}}</td>
+                                        <td>{{PQRS.comentarioCliente}}</td>
+                                        <td>{{PQRS.adjunto}}</td>
+                                        <td >
+                                            <a class="btn btn-" style='color:red;'href="{% url 'pqrs-eliminar' PQRS.id %}"onclick="return confirm('¿Estás seguro de eliminar la PQRS?')"><i class="fas  fa-trash-alt"></i></td>
+                                            {% endif %} 
+                                            
+                                    </tr>
+                                    {% endfor %}
+                                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div> 
 </div>
 
 
 {% endblock contenido %}
+
+
+{% block javascript %}
+<!-- DataTables  & Plugins -->
+<script src="{% static 'datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'datatables-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+<script src="{% static 'datatables-responsive/js/dataTables.responsive.min.js' %}"></script>
+<script src="{% static 'datatables-responsive/js/responsive.bootstrap4.min.js' %}"></script>
+<script src="{% static 'datatables-buttons/js/dataTables.buttons.min.js' %}"></script>
+<script src="{% static 'datatables-buttons/js/buttons.bootstrap4.min.js' %}"></script>
+<script src="{% static 'jszip/jszip.min.js' %}"></script>
+<script src="{% static 'pdfmake/pdfmake.min.js' %}"></script>
+<script src="{% static 'pdfmake/vfs_fonts.js' %}"></script><script src="{% static 'datatables-buttons/js/buttons.html5.min.js' %}"></script>
+<script src="{% static 'datatables-buttons/js/buttons.print.min.js' %}"></script>
+<script src="{% static 'datatables-buttons/js/buttons.colVis.min.js' %}"></script>
+<!-- Page specific script -->
+{% endblock javascript %}
 
 

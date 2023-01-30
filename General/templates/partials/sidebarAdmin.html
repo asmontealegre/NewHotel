@@ -1,0 +1,89 @@
+{% load static %}
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4 py-3" style="background-color: #191970">
+  <!-- Brand Logo -->
+  <a href="index3.html" class="brand-link">
+    <img src="{% static '\img\logo.png' %}" alt="login-icon" style="height: 3rem" style="opacity: .8"></i>
+    <span class="brand-text font-weight-light">La Gran Estación</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+  <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      
+      <div class="info text-white">
+        <Strong> {{usuario_actual.first_name}}&nbsp&nbsp{{usuario_actual.last_name}}</Strong>
+      </div>
+    </div>  
+
+ 
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+
+
+       
+        
+
+        <li class="nav-header"><h6>Inicio </h6></li>   
+            
+        <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-users"></i> <p>Registrar</p> 
+                
+              </a>
+            </li>
+         <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-user-plus"></i><p>Usuarios</p> 
+                
+              </a>
+            </li> 
+            
+        </li>
+        <li class="nav-header"><h6>Reservas</h6></li>   
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-calendar days"></i>
+              <p>Formulario</p> 
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-bell"></i>
+              <p>Reservaciones</p> 
+            </a>
+          </li>
+        </li> 
+         <li class="nav-header"><h6>Inscrito</h6></li>   
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-calendar days"></i>
+              <p>Listado</p> 
+            </a>
+          </li>
+        
+        
+        <li class="nav-header"><h6>PQRS</h6></li>   
+          <li class="nav-item">
+            <a href="{% url 'pqrs' %}" class="nav-link">
+              <i class="nav-icon fas fa-calendar days"></i>
+              <p>Buzón</p> 
+            </a>
+          </li>
+         
+        </li> 
+       
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+  <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->

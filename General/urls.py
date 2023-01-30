@@ -27,5 +27,6 @@ urlpatterns = [
     path('habitacion/',include('habitacion.urls')),
     path('reserva/',include('reserva.urls')),
     path('servicios/',include('servicios.urls')),
+    path('adm/',include('administracion.urls')),
     path('pqrs/',include('pqrs.urls')),
 ]

@@ -1,10 +1,10 @@
 {% extends 'partials/body.html' %}
-
 {% load static %}
 {% load crispy_forms_tags %}
 
 
-{% block contenido %}<br>
+{% block contenido %}
+<br>
 <div class="container pt-5 my-4">
 <div class="container pt-5">
 <div class="px-4 mt-5 text-left">
@@ -13,7 +13,7 @@
     <div class="d-grid gap-2 d-sm-flex ">
         <h5 class="lead ">A través de esta herramienta usted podrá: diligenciar, comunicar detalladamente y adjuntar archivos relacionados al caso que desee informar teniendo en cuenta el tipo de solicitud que necesite realizar:</h5>
 </div>
-<h6>
+<h6> 
 <b>SUGERENCIA:</b> Propuesta para incidir en el mejoramiento de un proceso relacionado con la prestación de nuestro servicio.
 </h6>
 <h6>
@@ -24,27 +24,21 @@
 </h6>
 <h6>
 <b>RECLAMO: </b>Es la oposición o contrariedad con el objeto de revisar y evaluar una actuación relacionada con la prestación de nuestro servicio en términos económicos.
-</h6>
+</h6></div>
 
-        
-    </div>
-</div>
-</div>
-</div>
 <div class="container border-primary rounded" style="background: #8bbdec1c;">
 <div class="container  w-75 pt-3" >  
 
-<div class="my-4"></div>
                   <h5 class="modal-title pb-3 pt-3" id="exampleModalLabel"><b>Datos del Cliente</b></h5>
                   <div class="container"><h6>Recuerda ser especifico e incluir la mayor cantidad de datos tuyos y del destinatario, así podremos darte una solución.</h6></div><hr>
                 
                 <div class="row g-3">
                 
-                  <div class="col-sm-6">
-                  <form  method='POST'>
+                <div class="col-sm-6">
+                <form  method='POST'>
                   {% csrf_token %}
                 <label for="country" class="form-label">Tipo de Documento</label>
-                <select class="form-select" id="id_tipoDocumento" name="tipoDocumento" required="">
+                <select class="form-select"  name="tipoDocumento" required="">
                   <option value="">...</option>
                   <option name="CC">Cédula de Ciudadanía</option>
                   <option name="CE">Cédula de Extranjería</option>
@@ -53,26 +47,26 @@
                 <div class="invalid-feedback">
                   Please select a valid country.
                 </div>
-              </div>
+              </div>   
 
-            <div class="col-sm-6">
-              <label for="address" class="form-label">Número de Documento</label>
-              <input type="number" class="form-control" id="id_documento" name="documento" placeholder="" required="">
-              <div class="invalid-feedback">
-                Please enter your shipping address.
-              </div>
-            </div>
+                <div class="col-sm-6">
+                  <label for="address" class="form-label">Número de Documento</label>
+                  <input type="number" class="form-control"  name="numeroDocumento" placeholder="" required="">
+                  <div class="invalid-feedback">
+                    Please enter your shipping address.
+                  </div>
+                </div>
                   <div class="col-sm-6">
                     <label class="form-label">Nombre</label>
-                    <input required type="text" class="form-control" id="id_nombres"
-                      name="nombres" placeholder="">
+                    <input required type="text" class="form-control"  name="nombres"
+                      placeholder="">
                     <div class="invalid-feedback">
                     </div>
                   </div>
 
                   <div class="col-6">
                     <label class="form-label">Apellidos</label>
-                    <input required type="text" class="form-control" id="id_apellidos"
+                    <input required type="text" class="form-control"
                       name="apellidos" placeholder="">
                     <div class="invalid-feedback">
 
@@ -82,7 +76,7 @@
                   <div class="col-sm-6">
                     <label class="form-label">Teléfono</label>
                     <div class="input-group has-validation">
-                      <input required type="number" class="form-control" id="id_telefono"
+                      <input required type="number" class="form-control" 
                         name="telefono">
                       <div class="invalid-feedback">
 
@@ -91,8 +85,8 @@
                   </div>
 
                   <div class="col-sm-6">
-                    <label class="form-label">Email <span class="text-muted">(Optional)</span></label>
-                    <input  required type="email" class="form-control" id="id_email"
+                    <label class="form-label">Email </label>
+                    <input  required type="email" class="form-control" 
                       name="email" placeholder="usuario@ejemplo.com">
                     <div class="invalid-feedback">
 
@@ -106,16 +100,16 @@
                 <div class="col-sm-4">
                 
                 <label for="country" class="form-label">Tipo de Solicitud</label>
-                <select class="form-select" id="id_tipoDocumento" name="tipoDocumento" required="">
+                <select class="form-select"  name="asunto" required="">
                   <option value="">...</option>
-                  <option name="CC">Queja</option>
-                  <option name="CE">Reclamo</option>
-                  <option name="PP">Petición</option>
-                  <option name="CC">Solicitud</option>
-                  <option name="CE">Denuncia</option>
-                  <option name="PP">Reembolso</option>
-                  <option name="CC">Estafa</option>
-                  <option name="CE">Robo</option>
+                  <option name="P">Petición</option>
+                  <option name="Q">Queja</option>
+                  <option name="R">Reclamo</option>
+                  <option name="S">Solicitud</option>
+                  <option name="D">Denuncia</option>
+                  <option name="M">Reembolso</option>
+                  <option name="E">Estafa</option>
+                  <option name="B">Robo</option>
                   
                 </select>
                 <div class="invalid-feedback">
@@ -125,7 +119,7 @@
 
                   <div class="col-sm-12 ">
                     <label class="form-label">Comentario</label>
-                    <textarea required class="form-control" id="id_comentarioCliente" name="comentarioCliente" rows="3"></textarea>
+                    <textarea required class="form-control"  name="comentarioCliente" rows="3"></textarea>
                     
                     <div class="invalid-feedback">
 
@@ -134,19 +128,21 @@
 
 
                   <div class="col-sm-6 pb-4">
-                    <label for="date">Adjunto<span class="text-muted"></span></label>
-                      <input  class="form-control" type="file" name="archivo">
+                    <label for="date">Adjuntar Archivo<span class="text-muted"></span></label>
+                      <input  class="form-control" type="file" name="adjunto">
                       <form action="..." method="post" enctype="multipart/form-data">
                   </div>
-
+                  
+                  <div class="col-sm-12 pb-4">
+                  <button  class="btn btn-primary  col-4  " value="Registrar">Enviar</button>
                 </div>
-            <button  class="btn btn-primary  col-4  " name="form_pqrs_registrada " value="Registrar">Enviar</button>
+                
+                </div>
 
-        </form>
-    
-    </div>
-    
-<div class="pb-5"></div>
-</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   
 {% endblock contenido %}

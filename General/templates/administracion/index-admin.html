@@ -1,0 +1,112 @@
+{% extends 'partials/bodyAdmin.html' %}
+{% load static %}
+
+{% block contenido %}
+<section class="content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box">
+                    <span class="info-box-icon bg-info elevation-1"><i
+                            class="fas fa-bed"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Habitaciones</span>
+                        <h3>{{cantidad_habitacion}}</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box mb-3">
+                    <span class="info-box-icon bg-danger elevation-1"><i
+                            class="fas fa-comments"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">PQRS</span>
+                        <h3>{{cantidad_pqrs}}</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box mb-3">
+                    <span class="info-box-icon bg-success elevation-1"><i
+                            class="fas fa-calendar-check"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Reservaciones</span>
+                        <h3>{{cantidad_reserva}}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box mb-3">
+                    <span class="info-box-icon bg-warning elevation-1"><i
+                            class="fas fa-user-check" style="color: white;"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Usuarios</span>
+                        <h3>{{cantidad_usuarios}}</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- /.row -->
+          <!-- Main row -->
+          <div class="row">
+            <!-- Left col -->
+            <section class="col-lg-12 connectedSortable">
+              <!-- Custom tabs (Charts with tabs)-->
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">
+                    <i class="fas fa-chart-pie mr-1"></i>
+                    Gestion de Reservas
+                  </h3>
+                  <div class="card-tools">
+                    
+                  </div>
+                </div><!-- /.card-header -->
+                <div class="card-body">
+                  <div class="tab-content p-0">
+                    <!-- Morris chart - Sales -->
+                    <div class="chart" id="stock-chart" style="position: relative; height: 300px;">
+                      <canvas id="stock-chart-canvas" height="300" style="height: 300px;"></canvas>
+                    </div>
+                    
+                  </div>
+                </div><!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            
+  
+            </section>
+            <!-- /.Left col -->
+            
+          
+          
+        </div><!-- /.container-fluid -->
+
+     
+
+
+        </div>
+
+
+    </div>
+</section>
+{% endblock contenido %}
+
+{% block javascript %}
+<script>
+  {% include 'chart/chart-stock.js' %}
+</script>
+{% endblock javascript %}

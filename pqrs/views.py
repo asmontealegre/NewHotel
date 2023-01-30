@@ -1,24 +1,22 @@
 
 from django.shortcuts import render, redirect
 from pqrs.forms import PQRSForms
-from django.contrib.auth.decorators import login_required, permission_required
 from pqrs.models import PQRS
-
-
 from django.contrib import messages
+
 # Create your views here.
-@login_required
 def pqrs(request):
     titulo="Buzón de Pqrs"
     form= PQRSForms()
     pqrs=PQRS.objects.all()
+    
     context={
         'titulo':titulo,
         'pqrs':pqrs,
         'form':form
     }
     return render(request,'pqrs/pqrs.html',context)
- 
+
 
 
 def pqrs_registrada(request):
@@ -28,7 +26,7 @@ def pqrs_registrada(request):
         if form.is_valid():
             form.save()
             messages.success(
-                request,f"Se Creo la PQRS exitosamente!"
+                request, f"Se creo la PQRS exitosamente!"
             )
             return redirect("pqrs-registrada")
         else:
@@ -41,6 +39,8 @@ def pqrs_registrada(request):
     }
     return render(request,'pqrs/pqrs-registrada.html',context)
 
+
+    
 def pqrs_eliminar(request, pk):
     titulo="Pqrs - Eliminar"
     pqrs= PQRS.objects.all()
@@ -60,9 +60,3 @@ def pqrs_eliminar(request, pk):
      
     }
     return render(request,'pqrs/pqrs.html',context)
-
-
-
-
-
-   
