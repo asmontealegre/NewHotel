@@ -42,21 +42,7 @@ def pqrs_registrada(request):
 
     
 def pqrs_eliminar(request, pk):
-    titulo="Pqrs - Eliminar"
-    pqrs= PQRS.objects.all()
+    pqrs= PQRS.objects.get(id=pk)
+    pqrs.delete()
 
-    PQRS.objects.filter(id=pk).update(
-            estado='0'
-        )
-    messages.success(
-                request,f"Se elimino la PQRS exitosamente!"
-            )
     return redirect('pqrs')
-        
-   
-    context={
-        'pqrs':pqrs,
-        'titulo':titulo,
-     
-    }
-    return render(request,'pqrs/pqrs.html',context)

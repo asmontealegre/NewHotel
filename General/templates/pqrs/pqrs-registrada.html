@@ -6,143 +6,141 @@
 {% block contenido %}
 <br>
 <div class="container pt-5 my-4">
-<div class="container pt-5">
-<div class="px-4 mt-5 text-left">
-    <h1 class=""></i>PQRS</h1>
-    <div class="col-lg-12 mx-auto">
-    <div class="d-grid gap-2 d-sm-flex ">
-        <h5 class="lead ">A través de esta herramienta usted podrá: diligenciar, comunicar detalladamente y adjuntar archivos relacionados al caso que desee informar teniendo en cuenta el tipo de solicitud que necesite realizar:</h5>
-</div>
-<h6> 
-<b>SUGERENCIA:</b> Propuesta para incidir en el mejoramiento de un proceso relacionado con la prestación de nuestro servicio.
-</h6>
-<h6>
-<b>PETICIÓN: </b>Solicitud de información relacionada con la prestación de nuestro servicio.
-</h6>
-<h6>
-<b>QUEJA:</b> Manifestación por la inconformidad generada por la prestación de nuestro servicio.
-</h6>
-<h6>
-<b>RECLAMO: </b>Es la oposición o contrariedad con el objeto de revisar y evaluar una actuación relacionada con la prestación de nuestro servicio en términos económicos.
-</h6></div>
-
-<div class="container border-primary rounded" style="background: #8bbdec1c;">
-<div class="container  w-75 pt-3" >  
-
-                  <h5 class="modal-title pb-3 pt-3" id="exampleModalLabel"><b>Datos del Cliente</b></h5>
-                  <div class="container"><h6>Recuerda ser especifico e incluir la mayor cantidad de datos tuyos y del destinatario, así podremos darte una solución.</h6></div><hr>
-                
-                <div class="row g-3">
-                
-                <div class="col-sm-6">
-                <form  method='POST'>
-                  {% csrf_token %}
-                <label for="country" class="form-label">Tipo de Documento</label>
-                <select class="form-select"  name="tipoDocumento" required="">
-                  <option value="">...</option>
-                  <option name="CC">Cédula de Ciudadanía</option>
-                  <option name="CE">Cédula de Extranjería</option>
-                  <option name="PP">Pasaporte</option>
-                </select>
-                <div class="invalid-feedback">
-                  Please select a valid country.
-                </div>
-              </div>   
-
-                <div class="col-sm-6">
-                  <label for="address" class="form-label">Número de Documento</label>
-                  <input type="number" class="form-control"  name="numeroDocumento" placeholder="" required="">
-                  <div class="invalid-feedback">
-                    Please enter your shipping address.
-                  </div>
-                </div>
-                  <div class="col-sm-6">
-                    <label class="form-label">Nombre</label>
-                    <input required type="text" class="form-control"  name="nombres"
-                      placeholder="">
-                    <div class="invalid-feedback">
-                    </div>
-                  </div>
-
-                  <div class="col-6">
-                    <label class="form-label">Apellidos</label>
-                    <input required type="text" class="form-control"
-                      name="apellidos" placeholder="">
-                    <div class="invalid-feedback">
-
-                    </div>
-                  </div>
-
-                  <div class="col-sm-6">
-                    <label class="form-label">Teléfono</label>
-                    <div class="input-group has-validation">
-                      <input required type="number" class="form-control" 
-                        name="telefono">
-                      <div class="invalid-feedback">
-
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-6">
-                    <label class="form-label">Email </label>
-                    <input  required type="email" class="form-control" 
-                      name="email" placeholder="usuario@ejemplo.com">
-                    <div class="invalid-feedback">
-
-                    </div>
-                  </div>
-
-                  <div class="my-4"></div>
-                  <h5 class="modal-title pb-3 pt-3" id="exampleModalLabel"><b>Datos de la PQRS</b></h5>
-                  <div class="container "><h6> &nbsp Daremos respuesta a su PQRS en un tiempo no mayor de 15 días.</h6></div><hr>
-                  
-                <div class="col-sm-4">
-                
-                <label for="country" class="form-label">Tipo de Solicitud</label>
-                <select class="form-select"  name="asunto" required="">
-                  <option value="">...</option>
-                  <option name="P">Petición</option>
-                  <option name="Q">Queja</option>
-                  <option name="R">Reclamo</option>
-                  <option name="S">Solicitud</option>
-                  <option name="D">Denuncia</option>
-                  <option name="M">Reembolso</option>
-                  <option name="E">Estafa</option>
-                  <option name="B">Robo</option>
-                  
-                </select>
-                <div class="invalid-feedback">
-                  Please select a valid country.
-                </div>
-              </div>
-
-                  <div class="col-sm-12 ">
-                    <label class="form-label">Comentario</label>
-                    <textarea required class="form-control"  name="comentarioCliente" rows="3"></textarea>
-                    
-                    <div class="invalid-feedback">
-
-                    </div>
-                  </div>
-
-
-                  <div class="col-sm-6 pb-4">
-                    <label for="date">Adjuntar Archivo<span class="text-muted"></span></label>
-                      <input  class="form-control" type="file" name="adjunto">
-                      <form action="..." method="post" enctype="multipart/form-data">
-                  </div>
-                  
-                  <div class="col-sm-12 pb-4">
-                  <button  class="btn btn-primary  col-4  " value="Registrar">Enviar</button>
-                </div>
-                
-                </div>
-
-              </div>
-            </div>
+  <div class="container pt-5">
+          <div class="px-4 mt-5 text-left">
+              <h1 class=""></i>PQRS</h1>
+              <div class="col-lg-12 mx-auto">
+              <div class="d-grid gap-2 d-sm-flex ">
+                  <h5 class="lead ">A través de esta herramienta usted podrá: diligenciar, comunicar detalladamente y adjuntar archivos relacionados al caso que desee informar teniendo en cuenta el tipo de solicitud que necesite realizar:</h5>
           </div>
+          <h6> 
+          <b>SUGERENCIA:</b> Propuesta para incidir en el mejoramiento de un proceso relacionado con la prestación de nuestro servicio.
+          </h6>
+          <h6>
+          <b>PETICIÓN: </b>Solicitud de información relacionada con la prestación de nuestro servicio.
+          </h6>
+          <h6>
+          <b>QUEJA:</b> Manifestación por la inconformidad generada por la prestación de nuestro servicio.
+          </h6>
+          <h6>
+          <b>RECLAMO: </b>Es la oposición o contrariedad con el objeto de revisar y evaluar una actuación relacionada con la prestación de nuestro servicio en términos económicos.
+          </h6></div>
+
+      <div class="container border-primary rounded" style="background: #8bbdec1c;">
+        <div class="container  w-75 pt-3" >  
+
+                        <h5 class="modal-title pb-3 pt-3" id="exampleModalLabel"><b>Datos del Cliente</b></h5>
+                        <div class="container"><h6>Recuerda ser especifico e incluir la mayor cantidad de datos tuyos y del destinatario, así podremos darte una solución.</h6></div><hr>
+                        
+                        <div class="row g-3">
+                        
+                          <div class="col-sm-6">
+                            <form  method='POST'>
+                              {% csrf_token %}
+                            <label for="country" class="form-label">Tipo de Documento</label>
+                            <select class="form-select"  name="tipoDocumento" required="">
+                              <option value="">...</option>
+                              <option name="CC">Cédula de Ciudadanía</option>
+                              <option name="CE">Cédula de Extranjería</option>
+                              <option name="PP">Pasaporte</option>
+                            </select>
+                            <div class="invalid-feedback">
+                              Please select a valid country.
+                            </div>
+                          </div>  
+
+                          <div class="col-sm-6">
+                            <label for="address" class="form-label">Número de Documento</label>
+                            <input type="number" class="form-control"  name="numeroDocumento" placeholder="" required="">
+                            <div class="invalid-feedback">
+                              Please enter your shipping address.
+                            </div>
+                          </div>
+
+                          <div class="col-sm-6">
+                            <label class="form-label">Nombre</label>
+                            <input required type="text" class="form-control"  name="nombres"
+                              placeholder="">
+                            <div class="invalid-feedback">
+                            </div>
+                          </div>
+
+                          <div class="col-6">
+                            <label class="form-label">Apellidos</label>
+                            <input required type="text" class="form-control"
+                              name="apellidos" placeholder="">
+                            <div class="invalid-feedback">
+
+                            </div>
+                          </div>
+
+                          <div class="col-sm-6">
+                            <label class="form-label">Teléfono</label>
+                            <div class="input-group has-validation">
+                              <input required type="number" class="form-control" 
+                                name="telefono">
+                              <div class="invalid-feedback">
+
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-sm-6">
+                            <label class="form-label">Email </label>
+                            <input  required type="email" class="form-control" 
+                              name="email" placeholder="usuario@ejemplo.com">
+                            <div class="invalid-feedback">
+
+                            </div>
+                          </div>
+
+                          <div class="my-4"></div>
+                          <h5 class="modal-title pb-3 pt-3" id="exampleModalLabel"><b>Datos de la PQRS</b></h5>
+                          <div class="container "><h6> &nbsp Daremos respuesta a su PQRS en un tiempo no mayor de 15 días.</h6></div><hr>
+                          
+                          <div class="col-sm-4">
+                          
+                            <label for="country" class="form-label">Tipo de Solicitud</label>
+                            <select class="form-select"  name="asunto" required="">
+                              <option value="">...</option>
+                              <option name="P">Petición</option>
+                              <option name="Q">Queja</option>
+                              <option name="R">Reclamo</option>
+                              <option name="S">Solicitud</option>
+                              <option name="D">Denuncia</option>
+                              <option name="M">Reembolso</option>
+                              <option name="E">Estafa</option>
+                              <option name="B">Robo</option>
+                              
+                            </select>
+                            <div class="invalid-feedback">
+                              Please select a valid country.
+                            </div>
+                          </div>
+
+                          <div class="col-sm-12 ">
+                            <label class="form-label">Comentario</label>
+                            <textarea required class="form-control"  name="comentarioCliente" rows="3"></textarea>
+                            
+                            <div class="invalid-feedback">
+
+                            </div>
+                          </div>
+
+                          <div class="col-sm-6 pb-4">
+                            <label for="date">Adjuntar Archivo<span class="text-muted"></span></label>
+                              <input  class="form-control" type="file" name="adjunto">
+                              <form action="..." method="post" enctype="multipart/form-data">
+                          </div>
+                          
+                          <div class="col-sm-12 pb-4">
+                            <button  class="btn btn-primary  col-4  " value="Registrar">Enviar</button>
+                          </div>
+                        
+                        </div>
         </div>
       </div>
-  
+    </div>
+  </div>
+</div>   
 {% endblock contenido %}

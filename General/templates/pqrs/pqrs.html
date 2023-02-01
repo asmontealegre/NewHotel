@@ -25,12 +25,12 @@
                                 <th scope="col"></th>
                         
                             </thead>
-                                <tbody>
+                            <tbody>
                                     
                                     {% for PQRS in pqrs %}
                                     <tr>
-                                    {% if PQRS.estado == '1' %}
-                                        <td>{{PQRS.fechaCreacion}}</td>
+                                   
+                                        <td>{{PQRS.fechaIngreso}}</td>
                                         <td>{{PQRS.tipoDocumento}}</td>
                                         <td>{{PQRS.numerodocumento}}</td>
                                         <td>{{PQRS.nombres}}</td>
@@ -41,12 +41,12 @@
                                         <td>{{PQRS.comentarioCliente}}</td>
                                         <td>{{PQRS.adjunto}}</td>
                                         <td >
-                                            <a class="btn btn-" style='color:red;'href="{% url 'pqrs-eliminar' PQRS.id %}"onclick="return confirm('¿Estás seguro de eliminar la PQRS?')"><i class="fas  fa-trash-alt"></i></td>
-                                            {% endif %} 
+                                        <a class="btn btn-danger" href="{% url 'pqrs-eliminar' PQRS.id %}"onclick="return confirm('¿Estás seguro de eliminar la PQRS?')"><i class="fa  fa-trash"></i></td>
+                    
                                             
                                     </tr>
                                     {% endfor %}
-                                        </tbody>
+                            </tbody>
                     </table>
                 </div>
             </div>

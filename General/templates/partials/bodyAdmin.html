@@ -39,8 +39,8 @@
     <link href="{% static 'css/select2.min.css' %}" rel="stylesheet" />
     <!-- Select2 -->
     
-    <link rel="shortcut icon" href="{% static 'img/LOGO.png' %}">
-    <title>Hotel la Gran Estación</title>
+    <link rel="shortcut icon" href="{% static 'img/LOGOM.png' %}">
+    <title>FUNDISMA</title>
     
 </head>
 
@@ -63,7 +63,7 @@
 
             {% for message in messages %}
                 <script type="text/javascript">
-                    toast.{{message.tags}}("{{message}}");
+                    toastr.{{message.tags}}("{{message}}");
                 </script>
                 
 
